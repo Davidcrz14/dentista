@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="dentist, dental care, oral health, dental services, dental clinic, DavC, DentiCare"
+    />
+    <title>DentiCare by DavC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="diente.png" type="image/x-icon" />
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .hover-float:hover {
+        animation: float 2s ease-in-out infinite;
+      }
+      .price-card {
+        transition: all 0.3s ease;
+      }
+      .price-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .nav-link {
+        position: relative;
+        transition: color 0.3s;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #2563eb;
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .dark {
+        background-color: #1a202c;
+        color: #e2e8f0;
+      }
+      .dark .bg-white {
+        background-color: #2d3748;
+      }
+      .dark .text-blue-800 {
+        color: #90cdf4;
+      }
+      .dark .text-blue-600 {
+        color: #63b3ed;
+      }
+      .dark .text-gray-600 {
+        color: #cbd5e0;
+      }
+      .dark .bg-blue-50 {
+        background-color: #2a4365;
+      }
+      .dark .bg-blue-800 {
+        background-color: #2c5282;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a
+            href="index.html"
+            id="logo"
+            class="text-2xl font-bold text-blue-600"
+          >
+            DentiCare
+            <img src="diente.png" alt="" class="inline-block h-6 w-6 ml-2" />
+          </a>
+          <div class="flex space-x-6">
+            <a
+              href="contacto.html"
+              class="nav-link text-blue-800 hover:text-blue-600"
+              >Contáctanos</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button id="menuToggle"></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-24">
+      <section class="container mx-auto px-6 py-12 text-center">
+        <h1
+          id="mainTitle"
+          class="text-5xl md:text-6xl font-bold text-blue-800 mb-6"
+        >
+          Bienvenido a DentiCare
+        </h1>
+        <p id="mainSubtitle" class="text-2xl text-blue-600 mb-12">
+          Cuidamos de tu sonrisa con profesionalismo y dedicación
+        </p>
+        <img
+          src="wallhaven-6qpxpq.jpg"
+          alt="Consultorio dental moderno"
+          class="w-full max-w-md mx-auto rounded-lg shadow-lg transform transition-transform duration-700 hover:scale-105 hover:shadow-2xl"
+          id="mainImage"
+        />
+      </section>
+
+      <section id="precios" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-blue-800 mb-12 text-center">
+            Nuestros Precios
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="priceCards">
+            <div class="bg-white p-8 rounded-lg shadow-lg price-card">
+              <i
+                data-lucide="tooth"
+                class="h-12 w-12 text-blue-600 mb-4 mx-auto"
+              ></i>
+              <h3 class="text-2xl font-semibold text-blue-800 mb-4">
+                Limpieza dental
+              </h3>
+              <p class="text-blue-600 font-bold text-3xl mb-4">$50</p>
+              <p class="text-gray-600">
+                Mantén tu sonrisa brillante y saludable
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg price-card">
+              <i
+                data-lucide="sparkles"
+                class="h-12 w-12 text-blue-600 mb-4 mx-auto"
+              ></i>
+              <h3 class="text-2xl font-semibold text-blue-800 mb-4">
+                Blanqueamiento
+              </h3>
+              <p class="text-blue-600 font-bold text-3xl mb-4">$200</p>
+              <p class="text-gray-600">
+                Recupera la blancura natural de tus dientes
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg price-card">
+              <i
+                data-lucide="smile"
+                class="h-12 w-12 text-blue-600 mb-4 mx-auto"
+              ></i>
+              <h3 class="text-2xl font-semibold text-blue-800 mb-4">
+                Ortodoncia
+              </h3>
+              <p class="text-blue-600 font-bold text-3xl mb-4">Desde $1000</p>
+              <p class="text-gray-600">
+                Consigue la sonrisa perfecta que siempre has deseado
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="horarios" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-blue-800 mb-12 text-center">
+            Horarios
+          </h2>
+          <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-4 mb-6">
+              <i data-lucide="clock" class="h-8 w-8 text-blue-600"></i>
+              <span class="text-blue-800 font-semibold text-2xl"
+                >Horario de atención</span
+              >
+            </div>
+            <ul class="space-y-4 text-lg">
+              <li class="flex justify-between items-center">
+                <span class="text-gray-700">Lunes a Viernes:</span>
+                <span class="text-blue-600 font-semibold"
+                  >9:00 AM - 7:00 PM</span
+                >
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-700">Sábados:</span>
+                <span class="text-blue-600 font-semibold"
+                  >10:00 AM - 3:00 PM</span
+                >
+              </li>
+              <li class="flex justify-between items-center">
+                <span class="text-gray-700">Domingos:</span>
+                <span class="text-blue-600 font-semibold">Cerrado</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="ubicacion" class="py-16">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-blue-800 mb-12 text-center">
+            Ubicación
+          </h2>
+          <div
+            class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d922.5242937192855!2d-97.80901358139445!3d17.82807265327754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1724880676100!5m2!1ses-419!2smx"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-lg">&copy; 2024 DentiCare. DavC-Sin nada que hacer.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Menu toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIcon = menuToggle.querySelector("i");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.setAttribute("data-lucide", "menu");
+        } else {
+          menuIcon.setAttribute("data-lucide", "x");
+        }
+        lucide.createIcons();
+      });
+
+      // Scroll effect for header
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          header.classList.add("bg-white", "shadow-md");
+        } else {
+          header.classList.remove("bg-white", "shadow-md");
+        }
+      });
+
+      // Animation for main content
+      const mainTitle = document.getElementById("mainTitle");
+      const mainSubtitle = document.getElementById("mainSubtitle");
+      const mainImage = document.getElementById("mainImage");
+
+      mainTitle.style.opacity = "0";
+      mainSubtitle.style.opacity = "0";
+      mainImage.style.opacity = "0";
+
+      setTimeout(() => {
+        mainTitle.style.transition = "opacity 0.8s, transform 0.8s";
+        mainTitle.style.opacity = "1";
+        mainTitle.style.transform = "translateY(0)";
+      }, 100);
+
+      setTimeout(() => {
+        mainSubtitle.style.transition = "opacity 0.8s, transform 0.8s";
+        mainSubtitle.style.opacity = "1";
+        mainSubtitle.style.transform = "translateY(0)";
+      }, 300);
+
+      setTimeout(() => {
+        mainImage.style.transition = "opacity 0.8s, transform 0.8s";
+        mainImage.style.opacity = "1";
+        mainImage.style.transform = "scale(1)";
+      }, 500);
+
+      // Animation for price cards
+      const priceCards = document.querySelectorAll("#priceCards > div");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.transition = "opacity 0.5s, transform 0.5s";
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }, index * 100);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      priceCards.forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        observer.observe(card);
+      });
+
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

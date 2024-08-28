@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto By DavC</title>
+    <meta
+      name="keywords"
+      content="dentist, dental care, oral health, dental services, dental clinic, DavC, DentiCare"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="diente.png" type="image/x-icon" />
+
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .hover-float:hover {
+        animation: float 2s ease-in-out infinite;
+      }
+      .nav-link {
+        position: relative;
+        transition: color 0.3s;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #2563eb;
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      .fade-in.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a
+            href="index.html"
+            id="logo"
+            class="text-2xl font-bold text-blue-600"
+          >
+            DentiCare
+            <img src="diente.png" alt="" class="inline-block h-6 w-6 ml-2" />
+          </a>
+          <div class="flex space-x-6">
+            <a
+              href="index.html"
+              class="nav-link text-blue-800 hover:text-blue-600"
+            >
+              <i data-lucide="home" class="inline-block"></i>
+            </a>
+            <a
+              href="contacto.html"
+              class="nav-link text-blue-800 hover:text-blue-600"
+              >Contáctanos</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button id="menuToggle"></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 mt-20">
+      <h1
+        class="text-4xl md:text-5xl font-bold text-blue-800 mb-8 text-center fade-in"
+      >
+        Contáctanos
+      </h1>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+            <h2 class="text-2xl font-semibold text-blue-800 mb-4">
+              Información de Contacto
+            </h2>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4">
+                <i data-lucide="phone" class="h-6 w-6 text-blue-600"></i>
+                <span class="text-gray-700">+52 1 951 745 7750</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="mail" class="h-6 w-6 text-blue-600"></i>
+                <span class="text-gray-700">cucd060823@gmail.com</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="map-pin" class="h-6 w-6 text-blue-600"></i>
+                <span class="text-gray-700"
+                  >Avenida Universidad 7, 69004 Heroica Cdad. de Huajuapan de
+                  León, Oax.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+            <h2 class="text-2xl font-semibold text-blue-800 mb-4">
+              Horario de Atención
+            </h2>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">Lunes - Viernes:</span>
+                <span class="text-blue-600 font-semibold"
+                  >9:00 AM - 7:00 PM</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">Sábados:</span>
+                <span class="text-blue-600 font-semibold"
+                  >10:00 AM - 3:00 PM</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">Domingos:</span>
+                <span class="text-blue-600 font-semibold">Cerrado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+            <h2 class="text-2xl font-semibold text-blue-800 mb-4">
+              Síguenos en Redes Sociales
+            </h2>
+            <div class="flex space-x-6">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/Hacker.crz"
+                class="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+              >
+                <i data-lucide="facebook" class="h-8 w-8"></i>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/davcrzc/"
+                class="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+              >
+                <i data-lucide="instagram" class="h-8 w-8"></i>
+              </a>
+              <a
+                href="https://x.com/programacionori"
+                class="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+              >
+                <i data-lucide="twitter" class="h-8 w-8"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+          <h2 class="text-2xl font-semibold text-blue-800 mb-4">Ubicación</h2>
+          <div
+            class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d922.5242937192855!2d-97.80901358139445!3d17.82807265327754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1724880676100!5m2!1ses-419!2smx"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-blue-800 text-white py-8 mt-12">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-lg">&copy; 2024 DentiCare. DavC-Sin nada que hacer.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Menu toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIcon = menuToggle.querySelector("i");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.setAttribute("data-lucide", "menu");
+        } else {
+          menuIcon.setAttribute("data-lucide", "x");
+        }
+        lucide.createIcons();
+      });
+
+      // Scroll effect for header
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          header.classList.add("bg-white", "shadow-md");
+        } else {
+          header.classList.remove("bg-white", "shadow-md");
+        }
+      });
+
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Fade-in animation
+      const fadeElems = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("appear");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      fadeElems.forEach((elem) => observer.observe(elem));
+    </script>
+  </body>
+</html>
